@@ -15,4 +15,8 @@ Pod::Spec.new do |s|
 
   s.vendored_frameworks = 'ios/Mapbox.framework'
   s.dependency 'React'
+
+  s.xcconfig = {
+    'FRAMEWORK_SEARCH_PATHS' => '$(PODS_ROOT)/../../node_modules/@mapbox/react-native-mapbox-gl/ios'
+  }
 end
