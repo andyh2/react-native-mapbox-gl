@@ -124,10 +124,6 @@ const float CENTER_Y_OFFSET_BASE = -0.5f;
         // default pin view
         return nil;
     } else {
-        // custom view
-        self.enabled = YES;
-        self.layer.zPosition = [self _getZPosition];
-        [self addGestureRecognizer:customViewTap];
         return self;
     }
 }
