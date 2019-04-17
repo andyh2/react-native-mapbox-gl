@@ -1018,7 +1018,9 @@
         // TODO throw execpetion
         return;
     }
-    layer.iconAnchor = styleValue.mglStyleValue;
+    // ignore the passed value and just force the one you need
+    MGLStyleValue *forceBottomAnchor = [MGLStyleValue valueWithRawValue:@(MGLIconAnchorBottom)];
+    layer.iconAnchor = forceBottomAnchor;
 }
 
 - (void)setIconPitchAlignment:(MGLSymbolStyleLayer *)layer withReactStyleValue:(RCTMGLStyleValue *)styleValue
